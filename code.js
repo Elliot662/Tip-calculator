@@ -4,13 +4,12 @@ const btn = document.querySelector('button')
 let totalTip
 let totalBill
 
-bill = parseInt(bill)
-tipPercent = parseInt(tipPercent)
 
-btn.onclick = () => {
-    totalTip = tipPercent%bill
+btn.onclick = () => { 
+    totalTip = tipPercent.value%bill.value
     document.getElementById("totalTip").innerHTML = totalTip
-    totalBill = bill+totalTip
+
+    totalBill = parseInt(bill.value)+parseInt(totalTip)
     document.getElementById("totalBill").innerHTML = totalBill
 }
 
